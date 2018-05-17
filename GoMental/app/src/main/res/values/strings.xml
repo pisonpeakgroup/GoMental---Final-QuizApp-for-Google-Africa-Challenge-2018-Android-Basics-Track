@@ -1,0 +1,63 @@
+<resources>
+    <!--Labels in the manifest-->
+    <string name="app_name">GoMental</string>
+    <string name="informative_screen">Informative</string>
+    <string name="survey_screen">Survey Questions</string>
+
+    <!--Buttons string resources-->
+    <string name="to_informative_from_main_button">To informative</string>
+    <string name="to_survey_from_main_button">To survey</string>
+    <string name="begin_survey_from_informative_button">Begin Survey</string>
+    <string name="submit_survey_button">Submit</string>
+
+    <!--RadioButton string resources-->
+    <string name="yes_to_question">Yes</string>
+    <string name="no_to_question">No</string>
+
+    <!--Checkbox string resources-->
+    <string name="lived_or_interacted_with_someone_with_mental_health_issues">I have lived or interacted with someone with mental health issues.</string>
+    <string name="have_had_or_have_mental_health_issues">I have had or have mental health issues.</string>
+    <string name="none_of_the_above">None of the above apply to me.</string>
+
+    <string name="witchcraft">Witchcraft</string>
+    <string name="silence">Silence</string>
+    <string name="high_medication_costs">High costs of medication</string>
+
+    <!--Questions TextBoxes string resources-->
+    <string name="thank_you_for_your_time">Thank you for your time. The survey should take less than five minutes. Questions with a * are gradable.</string>
+    <string name="survey_question_1">1. Which month is mental health awareness month? *</string>
+    <string name="survey_question_2">2. Which of the following best describes you?</string>
+    <string name="survey_question_3">3. Is there medical assistance for those who have mental illnesses? *</string>
+    <string name="survey_question_4">4. Old people are more prone to mental illnesses compared to younger people. *</string>
+    <string name="survey_question_5">5. What is the major problem when it comes to dealing with mental health? *</string>
+    <string name="survey_question_6">6. The poor are likelier to have mental health issues compared to the rich. *</string>
+
+    <!--EditText hints-->
+    <string name="mental_health_awareness_month">Mental health awareness month</string>
+    <string name="name_of_your_country">Name of your country</string>
+
+    <!--Other TextBoxes-->
+    <string name="hello_world_lets_talk">Hello World! Lets talk about…</string>
+    <string name="introduction_to_the_survey">For a long time, mental health has been an issue that has been avoided &amp; misunderstood by the entire world.
+                In a bid to raise the awareness &amp; test people\'s knowledge, we request you to take our short survey.\nThank you!</string>
+    <string name="welcome_to_the_informative">Welcome to the informative!</string>
+    <string name="informative_statistics">->The WHO says that every 1 in 4 people has a mental issue.
+                \n->This translates to around 450M people globally.
+                \n->Millions do not seek help due to stigma and discrimination.</string>
+    <string name="informative_disorders">Common disorders include:
+                  \n->Depression
+                  \n->Most kinds of phobias
+                  \n->Schizophrenia
+                  \n->Bipolar disorder
+                  \n->Autism
+                  \n->Anxiety and panic
+                  \n->Post-traumatic stress</string>
+    <string name="end_of_the_informative">This marks the end of our brief informative. Don\'t just stop here, go ahead and do some more research online!
+                \nPress the button below to begin the survey.</string>
+
+    <!--Content descriptions for the images-->
+    <string name="main_activity_image_contentDescription">Main image of mental health.</string>
+    <string name="left_informative_picture_contentDescription">Left mental health image</string>
+    <string name="right_informative_picture_contentDescription">Right mental health image</string>
+
+</resources>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InformativeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/informative_welcome_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:paddingEnd="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingStart="8dp"
+            android:text="@string/welcome_to_the_informative"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:id="@+id/informative_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/informative_welcome_label"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:paddingEnd="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingStart="8dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/left_informative_picture_contentDescription"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/m_health" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/right_informative_picture_contentDescription"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/mental_health" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/informative_text_layout_opening"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/informative_image_layout"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/informative_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/informative_text_layout_opening"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="8dp"
+                android:paddingEnd="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingStart="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/informative_statistics"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="8dp"
+                android:paddingEnd="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingStart="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/informative_disorders"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/informative_text_layout_closing"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/informative_text_layout"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/informative_ready_survey_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/informative_text_layout_closing"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif"
+            android:paddingEnd="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingStart="8dp"
+            android:text="@string/end_of_the_informative"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/beginSurvey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/informative_ready_survey_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/button_custom"
+            android:onClick="beginSurvey"
+            android:text="@string/begin_survey_from_informative_button"
+            android:textAllCaps="true" />
+    </RelativeLayout>
+</ScrollView>

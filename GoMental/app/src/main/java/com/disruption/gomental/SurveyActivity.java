@@ -19,15 +19,34 @@ public class SurveyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_survey);
     }
 
-   //On pressing the submit button, retrieve the country name string and print out a toast with a score
+    //On pressing the submit button, retrieve the country name string and print out a toast with a score. The toast changes depending
+    //checkbox the user checked.
     public void submitSurvey(View view) {
         EditText mNameOfCountry = findViewById(R.id.survey_enter_country_name);
         String countryName = mNameOfCountry.getText().toString();
 
+        CheckBox questionTwoCheckBox1 = findViewById(R.id.question2CheckBox1);
+        boolean hasCheckedBox1OfQuestion2 = questionTwoCheckBox1.isChecked();
+
+        CheckBox questionTwoCheckBox2 = findViewById(R.id.question2CheckBox2);
+        boolean hasCheckedBox2OfQuestion2 = questionTwoCheckBox2.isChecked();
+
+        CheckBox questionTwoCheckBox3 = findViewById(R.id.question2CheckBox3);
+        boolean hasCheckedBox3OfQuestion2 = questionTwoCheckBox3.isChecked();
+
         int surveyScore = calculateUserSurveyScore();
 
-        Toast.makeText(this, "Thank you for your participation! \nYour grade: "
-                + surveyScore + " of the possible five. \nYour Country: " + countryName, Toast.LENGTH_SHORT).show();
+        if (hasCheckedBox1OfQuestion2 || hasCheckedBox2OfQuestion2) {
+            Toast.makeText(this, "The survey team commends you for understanding mental health issues. Great work!"
+                    + "\nYour score: " + surveyScore + "/5" + "\nYour country: " + countryName, Toast.LENGTH_LONG).show();
+        } else if (hasCheckedBox3OfQuestion2) {
+            Toast.makeText(this, "Thank you for your participation! If you can, try to interact with those who have mental health issues" +
+                    "so that you can know them better."
+                    + "\nYour score: " + surveyScore + "/5" + "\nYour country: " + countryName, Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "Thank you for your participation!"
+                    + "\nYour score: " + surveyScore + "/5" + "\nYour country: " + countryName, Toast.LENGTH_LONG).show();
+        }
     }
 
     //Check for correct answers (where applicable) in the answers given by the user
@@ -44,11 +63,11 @@ public class SurveyActivity extends AppCompatActivity {
         RadioButton yesQuestion3 = findViewById(R.id.yes_question3);
         boolean hasCheckedYesQuestion3 = yesQuestion3.isChecked();
 
-        RadioButton yesQuestion4 = findViewById(R.id.yes_question4);
-        boolean hasCheckedYesQuestion4 = yesQuestion4.isChecked();
+        RadioButton noQuestion4 = findViewById(R.id.no_question4);
+        boolean hasCheckedNoQuestion4 = noQuestion4.isChecked();
 
-        RadioButton yesQuestion6 = findViewById(R.id.yes_question6);
-        boolean hasCheckedYesQuestion6 = yesQuestion6.isChecked();
+        RadioButton noQuestion6 = findViewById(R.id.no_question6);
+        boolean hasCheckedNoQuestion6 = noQuestion6.isChecked();
 
 
         if (awarenessMonth.equals("May")) {
@@ -56,20 +75,14 @@ public class SurveyActivity extends AppCompatActivity {
         }
         if (hasCheckedYesQuestion3) {
             userSurveyScore++;
-        } else {
-            return userSurveyScore;
         }
-        if (!hasCheckedYesQuestion4) {
+        if (hasCheckedNoQuestion4) {
             userSurveyScore++;
-        } else {
-            return userSurveyScore;
         }
         if (hasCheckedBox2OfQuestion5) {
             userSurveyScore++;
         }
-        if (hasCheckedYesQuestion6) {
-            return userSurveyScore;
-        } else {
+        if (hasCheckedNoQuestion6) {
             userSurveyScore++;
         }
         return userSurveyScore;
